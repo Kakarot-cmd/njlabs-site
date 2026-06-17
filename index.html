@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJ Labs</title>
+  <meta name="description" content="NJ Labs builds privacy-first, child-safe mobile apps.">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; color: #333; line-height: 1.55; }
+    h1 { color: #4a0e8f; margin-bottom: 4px; }
+    .tagline { color: #6b6478; font-size: 1.05em; margin-top: 0; }
+    h2 { color: #6b21a8; margin-top: 36px; }
+    .app { border: 1px solid #e7e0f3; border-radius: 10px; padding: 20px 22px; margin: 18px 0; }
+    .app .name { font-size: 1.2em; font-weight: bold; color: #4a0e8f; }
+    .app .desc { color: #555; margin: 6px 0 12px; }
+    .app a { color: #6b21a8; margin-right: 16px; font-size: 0.95em; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #eee; color: #6b6478; font-size: 0.9em; }
+    a { color: #6b21a8; }
+  </style>
+</head>
+<body>
+  <h1>NJ Labs</h1>
+  <p class="tagline">Privacy-first, child-safe mobile apps. Built by an independent developer.</p>
+
+  <h2>Our apps</h2>
+  <div class="app">
+    <div class="name">Skanlore</div>
+    <div class="desc">A camera-based vocabulary RPG for children aged 5&ndash;12. Scan real objects, clear dungeons, grow words.</div>
+    <a href="skanlore/privacy-policy.html">Privacy Policy</a>
+    <a href="skanlore/terms.html">Terms</a>
+    <a href="skanlore/data-deletion.html">Delete my data</a>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="y"></span> NJ Labs &middot; <a href="mailto:support-skanlore@njlabs.app">support-skanlore@njlabs.app</a></p>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
