@@ -16,11 +16,11 @@
 </head>
 <body>
   <h1>Skanlore — Privacy Policy</h1>
-  <p class="meta"><strong>Last updated: June 3, 2026</strong></p>
+  <p class="meta"><strong>Last updated: July 4, 2026</strong></p>
   <p class="meta">Skanlore is published by NJ Labs.</p>
 
   <h2>Camera</h2>
-  <p>Skanlore uses your device camera solely for real-time object recognition during vocabulary quests. When you scan an object, the camera frame is sent to our evaluation service and forwarded to our AI provider (Anthropic) for real-time processing, then discarded immediately after the verdict is returned. This happens the same way on both iOS and Android. Camera frames are processed in-memory only: they are never written to your device's photo library, never stored on our servers, and never shared with advertisers or used for any purpose other than returning your scan result. See "How AI Is Used" below for details on what is sent.</p>
+  <p>Skanlore uses your device camera solely for real-time object recognition during vocabulary quests. When you scan an object, the camera frame is sent to our evaluation service and forwarded to a third-party AI provider — <strong>Google (Gemini)</strong> and/or <strong>Anthropic (Claude)</strong> — for real-time processing, then discarded immediately after the verdict is returned. This happens the same way on both iOS and Android. Camera frames are processed in-memory only: they are never written to your device's photo library, never stored on our servers, and never shared with advertisers or used for any purpose other than returning your scan result. See "How AI Is Used" below for details on what is sent and to whom.</p>
 
   <h2>Data We Collect</h2>
   <ul>
@@ -35,7 +35,12 @@
   <p>Skanlore is designed for children aged 5–12 used under parental supervision. Before any child profile can be created, the parent must complete a verified consent flow that confirms their age and authority to consent on the child's behalf. This complies with the U.S. Children's Online Privacy Protection Act (16 CFR Part 312) and Article 8 of the EU General Data Protection Regulation. We collect the minimum data necessary to operate the educational features of the app and nothing else.</p>
 
   <h2>How AI Is Used</h2>
-  <p>Skanlore uses Anthropic's Claude AI to evaluate scanned objects against vocabulary properties and generate quest content. When a scan is performed, the detected object label, the vocabulary words being evaluated, the child's age band, and the camera frame (on both iOS and Android) are sent to our evaluation service, which forwards them to Anthropic. The child's name and parent email are never sent to the AI service. Anthropic does not train its models on Skanlore user data.</p>
+  <p>Skanlore uses third-party AI to evaluate scanned objects against vocabulary properties and to generate quest content. Two AI providers are used:</p>
+  <ul>
+    <li><strong>Object scan evaluation</strong> is performed by <strong>Google</strong> (the Gemini API). When a scan is performed, the detected object label, the vocabulary words being evaluated, the child's age band, and the camera frame are sent to our evaluation service, which forwards them to Google for real-time processing.</li>
+    <li><strong>Quest content generation and word classification</strong> are performed by <strong>Anthropic</strong> (the Claude API).</li>
+  </ul>
+  <p>Depending on service conditions, scan evaluation may be routed to either Google or Anthropic; both providers are bound by the same data-use terms described here. In all cases, <strong>the child's name and the parent's email are never sent to any AI provider.</strong> Data submitted to Google and Anthropic is processed under their respective <strong>paid API terms</strong> and is not used to train their AI models, is not used for advertising, and is not sold.</p>
 
   <h2>Data Deletion</h2>
   <p>Parents may request deletion of all account data at any time from inside the app: <strong>Parent Dashboard → Word Tome → enter Parent PIN → Request Account Deletion</strong>. After confirmation, all child profiles, quest progress, scanned word history, and the parent account itself are permanently deleted within 30 days. Crash logs, which contain only a pseudonymous account identifier and never your name or email, may persist with our crash-reporting provider for up to 90 days, after which they can no longer be associated with a deleted account.</p>
@@ -44,7 +49,8 @@
   <h2>Third-Party Services</h2>
   <ul>
     <li><strong>Supabase</strong> — secure data storage and authentication (EU and US regions).</li>
-    <li><strong>Anthropic</strong> — AI evaluation service (Claude). Anthropic's privacy practices: <code>anthropic.com/privacy</code></li>
+    <li><strong>Google (Gemini API)</strong> — AI evaluation of scanned objects. Processed under Google's paid API terms; not used to train Google's models, for advertising, or sold. Google's privacy practices: <code>policies.google.com/privacy</code></li>
+    <li><strong>Anthropic (Claude API)</strong> — AI quest-content generation and word classification, and (as a routing alternative) scan evaluation. Anthropic's privacy practices: <code>anthropic.com/privacy</code></li>
     <li><strong>Sentry</strong> — crash reporting. Crash events are tied to a pseudonymous account identifier only; your name and email are never sent.</li>
     <li><strong>Upstash Redis</strong> — short-lived cache of evaluation results; cache keys do not contain child identifiers.</li>
   </ul>
