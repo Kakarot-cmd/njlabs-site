@@ -16,7 +16,7 @@
 </head>
 <body>
   <h1>Skanlore — Privacy Policy</h1>
-  <p class="meta"><strong>Last updated: July 4, 2026</strong></p>
+  <p class="meta"><strong>Last updated: July 10, 2026</strong></p>
   <p class="meta">Skanlore is published by NJ Labs.</p>
 
   <h2>Camera</h2>
@@ -52,7 +52,7 @@
     <li><strong>Google (Gemini API)</strong> — AI evaluation of scanned objects. Processed under Google's paid API terms; not used to train Google's models, for advertising, or sold. Google's privacy practices: <code>policies.google.com/privacy</code></li>
     <li><strong>Anthropic (Claude API)</strong> — AI quest-content generation and word classification, and (as a routing alternative) scan evaluation. Anthropic's privacy practices: <code>anthropic.com/privacy</code></li>
     <li><strong>Sentry</strong> — crash reporting. Crash events are tied to a pseudonymous account identifier only; your name and email are never sent.</li>
-    <li><strong>Upstash Redis</strong> — short-lived cache of evaluation results; cache keys do not contain child identifiers.</li>
+    <li><strong>Upstash Redis</strong> — short-lived cache of scan-evaluation results (object label and verdict only), retained for up to 14 days and then automatically expired; cache keys do not contain child identifiers, names, or camera images.</li>
   </ul>
   <p>No data is shared with advertisers, data brokers, or analytics providers.</p>
 
