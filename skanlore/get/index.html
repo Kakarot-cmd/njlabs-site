@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skanlore: Download the vocabulary adventure for kids</title>
+<meta name="description" content="Skanlore turns the real world into a vocabulary adventure for children aged 5–12. Scan real objects, clear dungeon quests, grow words. Free on the App Store and Google Play.">
+<meta name="theme-color" content="#6D3BE0">
+<meta name="apple-itunes-app" content="app-id=6766159881">
+<meta property="og:title" content="Skanlore: Point. Scan. Learn a word.">
+<meta property="og:description" content="A camera-based vocabulary RPG for children aged 5–12. Free on the App Store and Google Play.">
+<meta property="og:url" content="https://njlabs.app/skanlore/get">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://njlabs.app/skanlore/get">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --violet:#6D3BE0; --violet-deep:#4B22A8; --night:#1B1340; --ink:#2A2250; --muted:#4A4763;
+  --sun:#FFD23F; --coral:#FF5A5F; --teal:#1FA89C; --green:#2A9D57; --pink:#E8467C; --blue:#2F7DE1; --orange:#F08A24;
+  --ground:#F3F6FF; --card:#FFFFFF;
+  --display:'Baloo 2',system-ui,sans-serif; --body:'Nunito',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--night);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block}
+a{color:var(--violet-deep)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{display:inline-block;padding:5px 12px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.h2{font-size:clamp(30px,5vw,42px);font-weight:800;margin-bottom:10px}
+.lede{font-size:18px;color:var(--muted);max-width:640px}
+
+/* hero */
+.hero{position:relative;background:var(--violet);color:#fff;overflow:hidden;padding:28px 0 96px}
+.hero .bg{position:absolute;inset:0;pointer-events:none}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+.brand{font-family:var(--display);font-weight:800;font-size:22px;color:#fff;text-decoration:none;letter-spacing:.5px}
+.top small{font-weight:700;opacity:.85}
+.hero-grid{position:relative;display:grid;gap:36px;align-items:center}
+@media(min-width:860px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero .eyebrow{background:rgba(255,255,255,.16);color:#fff}
+.hero h1{font-size:clamp(60px,12vw,104px);font-weight:800;color:var(--sun);letter-spacing:1px;text-shadow:0 6px 0 rgba(27,19,64,.45);margin:14px 0 8px}
+.tag{font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,40px);line-height:1.05}
+.hero p.sub{margin-top:14px;font-size:18px;font-weight:600;color:#F1ECFF;max-width:520px}
+
+.stores{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.store{position:relative;display:flex;align-items:center;gap:12px;min-height:60px;padding:10px 20px 10px 14px;border-radius:16px;background:var(--night);color:#fff;text-decoration:none;border:3px solid #fff;box-shadow:0 6px 0 rgba(27,19,64,.4);transition:transform .15s ease,box-shadow .15s ease}
+.store:hover{transform:translateY(-2px);box-shadow:0 8px 0 rgba(27,19,64,.4)}
+.store:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(27,19,64,.4)}
+.store:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
+.store .ic{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.store small{display:block;font-size:12px;font-weight:700;opacity:.8;line-height:1.1}
+.store b{display:block;font-family:var(--display);font-size:21px;line-height:1.1}
+.store .rec{display:none;position:absolute;top:-12px;right:-8px;padding:2px 9px;border-radius:999px;background:var(--sun);color:var(--night);font-size:11px;font-weight:800;border:2px solid var(--night)}
+.store.is-yours .rec{display:block}
+.free-note{margin-top:14px;font-size:15px;font-weight:700;color:#F1ECFF;display:flex;flex-wrap:wrap;gap:8px 16px}
+.free-note span{display:flex;align-items:center;gap:6px}
+
+.phone-stage{position:relative;height:400px;max-width:380px;margin:0 auto;width:100%}
+.phone{position:absolute;left:50%;top:10px;width:200px;height:370px;margin-left:-70px;border:6px solid #fff;border-radius:36px;background:var(--night);transform:rotate(6deg);box-shadow:0 16px 0 rgba(27,19,64,.35);padding:16px 12px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.notch{width:56px;height:6px;border-radius:3px;background:#3A2F6B}
+.qchip{width:100%;padding:9px;border-radius:14px;background:#2C1F63;text-align:center}
+.qchip small{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--sun)}
+.qchip span{font-size:14px;font-weight:700;line-height:1.25}
+.scanbox{position:relative;width:136px;height:136px;display:flex;align-items:center;justify-content:center}
+.scanbox>svg:first-child{position:absolute;inset:0}
+.verdict{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;background:#35C46A;font-size:14px;font-weight:800}
+.fly{position:absolute;animation:bob 5s ease-in-out infinite}
+.fly.d2{animation-delay:-1.6s}.fly.d3{animation-delay:-3.1s}.fly.d4{animation-delay:-.8s}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@media (prefers-reduced-motion:reduce){.fly{animation:none}html{scroll-behavior:auto}}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:60px}
+
+/* intro */
+.intro{display:grid;gap:28px;align-items:center}
+@media(min-width:860px){.intro{grid-template-columns:1fr 1fr}}
+.examples{display:grid;gap:12px}
+.ex{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:var(--card);border:2.5px solid var(--c)}
+.ex .word{font-family:var(--display);font-weight:800;font-size:22px;color:var(--night);min-width:128px}
+.ex .arrow{color:var(--c);font-weight:800}
+.ex .obj{font-weight:700;color:var(--muted)}
+
+/* steps */
+.steps{display:grid;gap:16px;margin-top:26px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.step{padding:22px;border-radius:22px;background:var(--card);border:3px solid var(--c);position:relative}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:24px;margin-bottom:12px}
+.step h3{font-size:24px;font-weight:800;margin-bottom:6px}
+.step p{color:var(--muted)}
+
+/* places */
+.places{background:#FFF6D6}
+.place-grid{display:grid;gap:14px;margin-top:26px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.place{padding:20px;border-radius:22px;background:var(--card);border:3px solid var(--night);box-shadow:5px 5px 0 var(--night)}
+.place .pi{width:48px;height:48px;border-radius:14px;background:var(--c);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.place h3{font-size:23px;font-weight:800;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{padding:3px 10px;border-radius:999px;background:var(--ground);font-size:14px;font-weight:800;color:var(--ink)}
+.place-cta{margin-top:24px;padding:20px 22px;border-radius:22px;background:var(--sun);border:3px solid var(--night);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.place-cta b{font-family:var(--display);font-size:24px;line-height:1.1}
+.place-cta p{flex:1 1 320px;font-weight:600;color:var(--ink)}
+
+/* features */
+.feat-grid{display:grid;gap:14px;margin-top:26px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.feat{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:20px;background:var(--card)}
+.feat .fi{flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--c);display:flex;align-items:center;justify-content:center}
+.feat h3{font-size:21px;font-weight:800;margin-bottom:3px}
+.feat p{font-size:15.5px;color:var(--muted)}
+.feat.hl{border:3px solid var(--green)}
+.badge-free{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:var(--green);color:#fff;font-family:var(--body);font-size:12px;font-weight:800;vertical-align:middle}
+
+/* parents */
+.parents{background:var(--night);color:#fff}
+.parents .lede{color:#D9D2F7}
+.par-grid{display:grid;gap:16px;margin-top:26px}
+@media(min-width:860px){.par-grid{grid-template-columns:1.2fr 1fr}}
+.big{padding:26px;border-radius:24px;background:var(--sun);color:var(--night);border:3px solid #fff}
+.big .eyebrow{background:var(--night);color:var(--sun)}
+.big h3{font-size:clamp(30px,5vw,38px);font-weight:800;margin:12px 0 10px}
+.big p{font-weight:600;color:var(--ink)}
+.big ol{margin:14px 0 0;padding-left:22px;font-weight:700;color:var(--ink)}
+.big li{margin:4px 0}
+.plist{display:grid;gap:12px}
+.pitem{display:flex;gap:14px;padding:18px;border-radius:20px;background:#2C1F63}
+.pitem .fi{flex-shrink:0;width:44px;height:44px;border-radius:12px;background:var(--sun);display:flex;align-items:center;justify-content:center}
+.pitem h3{font-size:20px;font-weight:800;margin-bottom:3px}
+.pitem p{font-size:15.5px;color:#D9D2F7}
+
+/* safety */
+.safe-grid{display:grid;gap:12px;margin-top:26px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.safe{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:var(--card);border:2px solid #D7DEF2}
+.safe svg{flex-shrink:0;margin-top:2px}
+.safe b{display:block;font-size:16.5px}
+.safe span{font-size:15px;color:var(--muted)}
+
+/* faq */
+.faq{display:grid;gap:10px;margin-top:24px;max-width:780px}
+details{background:var(--card);border-radius:16px;padding:0 18px;border:2px solid #D7DEF2}
+summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:800;font-size:17px;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:24px;line-height:1;color:var(--violet)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;color:var(--muted)}
+summary:focus-visible{outline:3px solid var(--violet);outline-offset:4px;border-radius:6px}
+
+/* final cta */
+.final{background:var(--violet);color:#fff;text-align:center;border-radius:32px;padding:44px 22px;margin:0 20px}
+.final h2{color:var(--sun);font-size:clamp(34px,6vw,52px);font-weight:800}
+.final p{margin:10px auto 0;max-width:520px;font-weight:600;color:#F1ECFF}
+.final .stores{justify-content:center}
+
+footer{padding:40px 0 48px;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{font-weight:700}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="bg" aria-hidden="true" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <circle cx="900" cy="80" r="220" fill="#fff" opacity=".06"/>
+    <circle cx="1100" cy="560" r="260" fill="#fff" opacity=".05"/>
+    <circle cx="120" cy="620" r="180" fill="#fff" opacity=".04"/>
+    <g fill="#FFD23F">
+      <path d="M640 60 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z"/>
+      <path d="M1120 200 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z"/>
+      <path d="M80 140 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3z"/>
+      <path d="M560 520 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+    </g>
+    <g fill="#fff" opacity=".8"><circle cx="1000" cy="300" r="3"/><circle cx="700" cy="380" r="2.5"/><circle cx="300" cy="560" r="3"/><circle cx="1150" cy="80" r="2.5"/></g>
+  </svg>
+
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="https://njlabs.app">NJ Labs</a>
+      <small>Ages 5–12 · iPhone, iPad &amp; Android</small>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">A word adventure for kids</span>
+        <h1>SKANLORE</h1>
+        <div class="tag">Point. Scan. Learn a word.</div>
+        <p class="sub">Skanlore turns the real world into a vocabulary adventure. Home, beach, supermarket or road trip: everywhere becomes a magical dungeon, and every object is a word waiting to be learned.</p>
+
+        <div class="stores" id="stores">
+          <a class="store" id="ios" href="https://apps.apple.com/app/id6766159881" rel="noopener">
+            <span class="rec">For your phone</span>
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+            <span><small>Download on the</small><b>App Store</b></span>
+          </a>
+          <a class="store" id="android" href="https://play.google.com/store/apps/details?id=com.navinj.lexilore" rel="noopener">
+            <span class="rec">For your phone</span>
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 3.5v17l14-8.5z"/></svg></span>
+            <span><small>Get it on</small><b>Google Play</b></span>
+          </a>
+        </div>
+        <div class="free-note">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CF0A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Free to download</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CF0A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>A free quest every day</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CF0A6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>No ads</span>
+        </div>
+      </div>
+
+      <div class="phone-stage" aria-hidden="true">
+        <!-- flying objects -->
+        <svg class="fly" style="left:6px;top:30px;rotate:14deg" width="64" height="64" viewBox="0 0 64 64"><path d="M32 18c-6-6-22-5-22 12 0 14 10 28 18 26 3-1 5-1 8 0 8 2 18-12 18-26 0-17-16-18-22-12z" fill="#FF5A5F" stroke="#1B1340" stroke-width="2.5"/><path d="M32 18c0-5 2-9 6-11" stroke="#6B3F1D" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M36 12c4-6 12-6 14-4-3 5-9 7-14 4z" fill="#35C46A" stroke="#1B1340" stroke-width="2"/><ellipse cx="21" cy="30" rx="4" ry="7" fill="#fff" opacity=".5"/></svg>
+        <svg class="fly d2" style="left:0;top:220px;rotate:-12deg" width="64" height="64" viewBox="0 0 64 64"><path d="M6 14c10-4 18-2 26 4v36c-8-6-16-8-26-4z" fill="#FFD23F" stroke="#1B1340" stroke-width="2.5" stroke-linejoin="round"/><path d="M58 14c-10-4-18-2-26 4v36c8-6 16-8 26-4z" fill="#FF9F43" stroke="#1B1340" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <svg class="fly d3" style="right:0;top:0;rotate:-20deg" width="50" height="50" viewBox="0 0 64 64"><path d="M10 54C10 28 28 10 56 8c0 28-18 46-46 46z" fill="#2EC4B6" stroke="#1B1340" stroke-width="2.5"/><path d="M14 50L46 18" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".85"/></svg>
+        <svg class="fly d4" style="right:4px;top:300px;rotate:18deg" width="58" height="58" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#fff" stroke="#1B1340" stroke-width="3"/><path d="M32 22l9 7-3 11H26l-3-11z" fill="#1B1340"/><path d="M32 22V7M41 29l14-4M38 40l9 12M26 40l-9 12M23 29l-14-4" stroke="#1B1340" stroke-width="2.5"/></svg>
+        <svg class="fly" style="left:60px;top:320px;rotate:-8deg" width="76" height="52" viewBox="0 0 72 48"><path d="M4 38c0-10 2-24 6-28 6 2 10 8 18 10 10 2 22 4 30 10 6 4 10 8 10 12v4H4z" fill="#FF6B9D" stroke="#1B1340" stroke-width="2.5" stroke-linejoin="round"/><rect x="4" y="38" width="64" height="7" rx="3" fill="#fff" stroke="#1B1340" stroke-width="2.5"/><path d="M24 20l4 6M32 22l3 6M40 24l2 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <!-- Lumi stand-in -->
+        <svg class="fly d2" style="left:34px;top:120px" width="100" height="100" viewBox="0 0 96 96"><defs><radialGradient id="lg" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FFF4B8" stop-opacity=".95"/><stop offset="55%" stop-color="#FFD23F" stop-opacity=".45"/><stop offset="100%" stop-color="#FFD23F" stop-opacity="0"/></radialGradient></defs><circle cx="48" cy="48" r="46" fill="url(#lg)"/><circle cx="48" cy="46" r="22" fill="#FFE27A" stroke="#1B1340" stroke-width="2.5"/><ellipse cx="41" cy="44" rx="3.2" ry="4.4" fill="#1B1340"/><ellipse cx="55" cy="44" rx="3.2" ry="4.4" fill="#1B1340"/><circle cx="36" cy="52" r="3.4" fill="#FF8FB1" opacity=".8"/><circle cx="60" cy="52" r="3.4" fill="#FF8FB1" opacity=".8"/><path d="M43 53 Q 48 58 53 53" stroke="#1B1340" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+
+        <div class="phone">
+          <div class="notch"></div>
+          <div class="qchip"><small>QUEST</small><span>Find something transparent</span></div>
+          <div class="scanbox">
+            <svg width="136" height="136" viewBox="0 0 110 110"><g fill="none" stroke="#2EC4B6" stroke-width="5" stroke-linecap="round"><path d="M4 26V4h22"/><path d="M84 4h22v22"/><path d="M106 84v22H84"/><path d="M26 106H4V84"/></g></svg>
+            <svg width="76" height="76" viewBox="0 0 64 64"><path d="M16 8h32l-4 48H20z" fill="#BFEFFF" fill-opacity=".45" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M18 26h28" stroke="#BFEFFF" stroke-width="2"/><path d="M24 14l-2 34" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/></svg>
+          </div>
+          <div class="verdict"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>Quest cleared!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0 36 C 200 6 400 60 600 32 C 800 4 1000 56 1200 24 V60 H0z" fill="#F3F6FF"/></svg>
+</header>
+
+<main>
+
+<!-- WHAT IS IT -->
+<section>
+  <div class="wrap intro">
+    <div>
+      <span class="eyebrow" style="background:#E7DEFF;color:var(--violet-deep)">What is Skanlore?</span>
+      <h2 class="h2" style="margin-top:12px">Every scan is a lesson hiding in plain sight</h2>
+      <p class="lede">Skanlore is a camera-based vocabulary game for children aged 5–12. Kids point the camera at real objects around them, and Skanlore checks whether the object matches the quest's word.</p>
+      <p class="lede" style="margin-top:12px">Words stop being definitions on a page. Your child learns what <b>cylindrical</b> means by finding a cylinder, and discovers <b>transparent</b> by scanning a glass. Every correct find clears a dungeon room, earns XP and raises their Lexicon Rank.</p>
+    </div>
+    <div class="examples" aria-label="Example words and objects">
+      <div class="ex" style="--c:#FF5A5F"><span class="word">Cylindrical</span><span class="arrow">→</span><span class="obj">a water bottle</span></div>
+      <div class="ex" style="--c:#1FA89C"><span class="word">Transparent</span><span class="arrow">→</span><span class="obj">a drinking glass</span></div>
+      <div class="ex" style="--c:#7C4DEB"><span class="word">Flexible</span><span class="arrow">→</span><span class="obj">a rubber band</span></div>
+      <div class="ex" style="--c:#F08A24"><span class="word">Hollow</span><span class="arrow">→</span><span class="obj">a cardboard tube</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO PLAY -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2">How to play</h2>
+    <p class="lede">Three steps, and the whole world becomes the game board.</p>
+    <div class="steps">
+      <div class="step" style="--c:#FF5A5F"><div class="n">1</div><h3>Get a quest</h3><p>Lumi, your guide, gives you a word challenge: find something <b>hollow</b>, <b>flexible</b> or <b>cylindrical</b>.</p></div>
+      <div class="step" style="--c:#1FA89C"><div class="n">2</div><h3>Scan it</h3><p>Look around, then point the camera at a real object you think fits the word.</p></div>
+      <div class="step" style="--c:#7C4DEB"><div class="n">3</div><h3>Win &amp; learn</h3><p>Skanlore explains why it fits (or doesn't). Clear the dungeon, earn XP and unlock spells.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLACES -->
+<section class="places">
+  <div class="wrap">
+    <span class="eyebrow" style="background:var(--night);color:var(--sun)">Play anywhere</span>
+    <h2 class="h2" style="margin-top:12px">Quests made for wherever you are</h2>
+    <p class="lede" style="color:var(--ink)">Parents can create a quest for the place you're heading to. Skanlore picks words your child can actually find there, so a trip to the shops becomes a treasure hunt.</p>
+
+    <div class="place-grid">
+      <div class="place"><div class="pi" style="--c:#2F7DE1"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg></div><h3>Travelling</h3><div class="chips"><span>rectangular</span><span>metallic</span><span>folded</span><span>wheeled</span></div></div>
+      <div class="place"><div class="pi" style="--c:#1FA89C"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 10c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0"/><path d="M2 16c2.5-2 5-2 7.5 0s5 2 7.5 0 3.5-1.5 5 0"/></svg></div><h3>At the beach</h3><div class="chips"><span>salty</span><span>gritty</span><span>smooth</span><span>spiral</span></div></div>
+      <div class="place"><div class="pi" style="--c:#F08A24"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg></div><h3>Supermarket</h3><div class="chips"><span>frozen</span><span>crunchy</span><span>fragile</span><span>spherical</span></div></div>
+      <div class="place"><div class="pi" style="--c:#E8467C"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Shopping</h3><div class="chips"><span>striped</span><span>soft</span><span>shiny</span><span>woven</span></div></div>
+      <div class="place"><div class="pi" style="--c:#7C4DEB"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M10 20v-5h4v5"/></svg></div><h3>At home</h3><div class="chips"><span>hollow</span><span>flexible</span><span>transparent</span><span>cylindrical</span></div></div>
+    </div>
+
+    <div class="place-cta">
+      <b>Or type your own idea.</b>
+      <p>A birthday party, the park, this week's school spelling list: describe it, and Skanlore turns it into a brand-new quest.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+  <div class="wrap">
+    <h2 class="h2">Inside the adventure</h2>
+    <p class="lede">A real game loop that keeps kids coming back, with learning built into every reward.</p>
+    <div class="feat-grid">
+      <div class="feat hl"><div class="fi" style="--c:#2A9D57"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3-1-5 1-8z"/></svg></div><div><h3>Daily Quest <span class="badge-free">FREE</span></h3><p>A fresh quest every day, free for everyone. Keep the streak alive for bonus rewards.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#F08A24"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></div><div><h3>Quest Map</h3><p>Dungeon-themed quests, each teaching a new set of words. Clear them to earn XP and raise your Lexicon Rank.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#E8467C"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><div><h3>Hard Mode</h3><p>Mastered a quest? Replay it with tougher words. The challenge grows with your child.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#1FA89C"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/><path d="M8 7h7"/></svg></div><div><h3>Word Tome</h3><p>Every word learned is saved to a personal Tome, with mastery levels to climb.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#7C4DEB"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M19 15l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg></div><div><h3>Spell Book</h3><p>Unlock magical spells as quest rewards. Each one marks a word concept your child has conquered.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#2F7DE1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4"/><path d="M12 13v4M8 21h8M9 17h6"/></svg></div><div><h3>Badges &amp; Sibling Leaderboard</h3><p>Earn achievements, track streaks on a heatmap, and race brothers and sisters for the top spot.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#FF5A5F"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M3 9V5a2 2 0 0 1 2-2h4M21 9V5a2 2 0 0 0-2-2h-4M3 15v4a2 2 0 0 0 2 2h4M21 15v4a2 2 0 0 1-2 2h-4"/></svg></div><div><h3>Smart evaluation</h3><p>Skanlore understands <i>why</i> an object fits a word. It's context-aware, not simple keyword matching.</p></div></div>
+      <div class="feat"><div class="fi" style="--c:#C9A100"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="11" r="6"/><path d="M10 10h.01M14 10h.01M10 13c1 .8 3 .8 4 0"/><path d="M8 17l-3 4M16 17l3 4"/></svg></div><div><h3>Lumi, your guide</h3><p>A friendly mascot who cheers, hints and celebrates every victory with your child.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARENTS -->
+<section class="parents">
+  <div class="wrap">
+    <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#fff">For grown-ups</span>
+    <h2 class="h2" style="margin-top:12px;color:#fff">You stay in the loop</h2>
+    <p class="lede">Skanlore is built so parents can guide the learning, see the progress, and keep the important controls.</p>
+    <div class="par-grid">
+      <div class="big">
+        <span class="eyebrow">Parents' power tool</span>
+        <h3>Create your own quests</h3>
+        <p>Pick a place or type a theme, and Skanlore builds a custom quest around words your child can find there.</p>
+        <ol>
+          <li>Choose a place: beach, supermarket, travel, shopping, or your own idea</li>
+          <li>Skanlore generates a quest with fitting words</li>
+          <li>Your child plays it on the spot</li>
+        </ol>
+      </div>
+      <div class="plist">
+        <div class="pitem"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B1340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 5v8l-8 5-8-5V8z"/><path d="M12 8l4 3v4l-4 2-4-2v-4z"/></svg></div><div><h3>Parent Dashboard &amp; Mastery Radar</h3><p>See which words were mastered and follow the whole learning journey.</p></div></div>
+        <div class="pitem"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B1340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 2 6 5.5"/></svg></div><div><h3>One app for the family</h3><p>Separate profiles for each child, each with their own progress and Word Tome.</p></div></div>
+        <div class="pitem"><div class="fi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B1340" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><div><h3>PIN-protected parent area</h3><p>Purchases, settings and profile changes sit behind a parent PIN.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow" style="background:#DDF5E6;color:#1E6B3E">Built for families</span>
+    <h2 class="h2" style="margin-top:12px">Child safety is the foundation</h2>
+    <p class="lede">Not an afterthought. Here's exactly what that means.</p>
+    <div class="safe-grid">
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Parent consent first</b><span>A parent must give consent before any child profile is created.</span></div></div>
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>No ads. No data sold.</b><span>Ever.</span></div></div>
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>No chat, no strangers</b><span>No social features of any kind.</span></div></div>
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Camera images never stored</b><span>Frames are processed only to check the scan, then discarded. Never saved or shared.</span></div></div>
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Names stay private</b><span>Your child's name and your email are never sent to the evaluation service.</span></div></div>
+      <div class="safe"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2A9D57" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>COPPA &amp; GDPR-K compliant</b><span>Request deletion of your data at any time, <a href="https://njlabs.app/skanlore/data-deletion.html">right here</a>.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="h2">Questions parents ask</h2>
+    <div class="faq">
+      <details><summary>What age is Skanlore for?</summary><p>Children aged 5–12. Hard Mode and parent-made quests let the difficulty grow as your child does.</p></details>
+      <details><summary>Is it free?</summary><p>Skanlore is free to download and includes a free quest every day. A Premium plan is available inside the app for families who want more daily scans; purchases sit behind the parent PIN.</p></details>
+      <details><summary>Does it work on iPhone, iPad and Android?</summary><p>Yes. Get it from the App Store for iPhone and iPad, or from Google Play for Android phones and tablets.</p></details>
+      <details><summary>Does it need the internet?</summary><p>Yes. Each scan is checked online so Skanlore can understand why an object fits a word. The camera image is used only for that check and is never stored.</p></details>
+      <details><summary>Can siblings share one account?</summary><p>Yes. Each child gets their own profile with separate progress, Word Tome and streaks, and siblings can compete on the family leaderboard.</p></details>
+      <details><summary>Where can we play?</summary><p>Anywhere with everyday objects: at home, at the beach, in the supermarket, while shopping or on a trip. Parents can create a quest for a specific place.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final">
+  <h2>Ready for the adventure?</h2>
+  <p>Download Skanlore free and turn the next trip to the shops into a word quest.</p>
+  <div class="stores">
+    <a class="store" href="https://apps.apple.com/app/id6766159881" rel="noopener">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+      <span><small>Download on the</small><b>App Store</b></span>
+    </a>
+    <a class="store" href="https://play.google.com/store/apps/details?id=com.navinj.lexilore" rel="noopener">
+      <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M6 3.5v17l14-8.5z"/></svg></span>
+      <span><small>Get it on</small><b>Google Play</b></span>
+    </a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© NJ Labs · Privacy-first, child-safe apps</div>
+    <nav aria-label="Legal">
+      <a href="https://njlabs.app/skanlore/privacy-policy.html">Privacy Policy</a>
+      <a href="https://njlabs.app/skanlore/terms.html">Terms</a>
+      <a href="https://njlabs.app/skanlore/data-deletion.html">Delete my data</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// Highlight (and put first) the store that matches the visitor's device. No redirect, no tracking.
+(function(){
+  try{
+    var ua=navigator.userAgent||'';
+    var isIOS=/iPhone|iPad|iPod/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+    var isAndroid=/Android/i.test(ua);
+    var wrap=document.getElementById('stores');
+    if(isIOS){document.getElementById('ios').classList.add('is-yours');}
+    else if(isAndroid){var a=document.getElementById('android');a.classList.add('is-yours');wrap.insertBefore(a,wrap.firstChild);}
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
